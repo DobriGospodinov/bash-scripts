@@ -15,15 +15,15 @@ read -p "Please enter the path of the directory you want to back up: " backup_di
 
 # check if directory that will be backed up exists:
 if [ ! -d "$backup_dir" ]; then
-    echo "Error: The specified backup directory does not exist or is not a directory."
+    echo "Error: The specified directory does not exist or is not a directory."
     exit 1
 fi
 
 read -p "Please enter the path of the directory where you want to store the backup: " output_dir
 
 # check if directory where the backup will be stored exists:
-if [ ! -d "$backup_dir" ]; then
-    echo "Error: The specified backup directory does not exist or is not a directory."
+if [ ! -d "$output_dir" ]; then
+    echo "Error: The specified directory does not exist or is not a directory."
     exit 1
 fi
 
